@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allowlist - DanishStateRP</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0e27;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            border-bottom: 2px solid #ff4655;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff4655, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ff4655;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Page Title */
+        .page-header {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 70, 85, 0.15) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #ff4655, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #ff4655;
+        }
+
+        .info-box {
+            background: rgba(20, 24, 50, 0.8);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #ff4655;
+            margin-bottom: 2rem;
+        }
+
+        .info-box h3 {
+            color: #ff4655;
+            margin-bottom: 1rem;
+        }
+
+        .info-box ul {
+            margin-left: 1.5rem;
+            color: #b0b0b0;
+        }
+
+        .info-box li {
+            margin-bottom: 0.8rem;
+        }
+
+        .discord-box {
+            background: linear-gradient(135deg, rgba(88, 101, 242, 0.15) 0%, rgba(255, 70, 85, 0.1) 100%);
+            border: 2px solid #ff4655;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .discord-box h3 {
+            font-size: 1.8rem;
+            color: #ff4655;
+            margin-bottom: 1rem;
+        }
+
+        .discord-button {
+            background: linear-gradient(135deg, #ff4655, #ff0000);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .discord-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 70, 85, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 2px solid #ff4655;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: #ff4655;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ff0000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">DanishStateRP</a>
+            <ul class="nav-links">
+                <li><a href="allowlist.html">Allowlist</a></li>
+                <li><a href="regler.html">Regler</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>ALLOWLIST</h1>
+        <p><strong>Sådan Kommer Du Ind På DanishStateRP</strong></p>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="info-box">
+                <h3>📋 Hvad er Allowlist?</h3>
+                <p>Allowlist er vores system til at sikre, at kun seriøse spillere kommer ind på serveren. Det hjælper os med at opretholde høj kvalitet og en god community.</p>
+                <p>Du kan ikke joine vores server uden en allowlist, kun hvis vi har åbenthus.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>✅ Krav til Allowlist</h3>
+                <ul>
+                    <li><strong>Alder:</strong> Du skal være mindst 16 år gammel</li>
+                    <li><strong>Erfaring:</strong> Du skal have en klar forståelse af hvad RP er, og hvad det vil sige at være i RP</li>
+                    <li><strong>Respekt:</strong> Du skal være respektfuld over for andre spillere</li>
+                    <li><strong>Discord:</strong> Du skal være medlem af vores Discord server</li>
+                    <li><strong>Engelsk/dansk:</strong> Du skal kunne kommunikere på dansk.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>🎮 Ansøgningsproces</h3>
+                <ul>
+                    <li><strong>Trin 1:</strong> Join vores Discord server</li>
+                    <li><strong>Trin 2:</strong> Gå til #allowlist kanalen</li>
+                    <li><strong>Trin 3:</strong> Udfyld ansøgningsformularen nøjagtigt</li>
+                    <li><strong>Trin 4:</strong> Vent på svar (normalt 24-48 timer)</li>
+                    <li><strong>Trin 5:</strong> Når du er godkendt, kan du joine serveren!</li>
+            
+                </ul>
+            </div>
+
+            <div class="discord-box">
+                <h3>🔗 Tilslut os på Discord</h3>
+                <p>Ansøg til allowlist gennem vores Discord server</p>
+                <a href="https://discord.gg/hj74CvkJ9m" target="_blank" class="discord-button">Gå til Discord</a>
+            </div>
+
+            <div class="info-box">
+                <h3>❌ Hyppige Afslag</h3>
+                <ul>
+                    <li>Uudfyldt eller usdudlende ansøgning</li>
+                    <li>For ung eller umodning profil</li>
+                    <li>Historie med bans på andre servere</li>
+                    <li>Dårlig stavning eller uprofessionel tone</li>
+                    <li>Manglende respekt i Discord</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>💡 Tips til Godkendelse</h3>
+                <ul>
+                    <li>Vær seriøs og ærlig i din ansøgning</li>
+                    <li>Skriv på dansk hvis muligt</li>
+                    <li>Forklar hvorfor du gerne vil være på vores server</li>
+                    <li>Vis interesse for roleplay, ikke bare misbrug</li>
+                    <li>Vær respektfuld i Discord chat</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>DanishStateRP</h3>
+            <p>Danmarks Førende FiveM Roleplay Server</p>
+            <div class="social-links">
+                <a href="https://discord.gg/danishstaterp" target="_blank">Discord</a>
+                <a href="https://www.gta5-mods.com/" target="_blank">GTA5-Mods</a>
+                <a href="https://cfx.re/" target="_blank">CFX</a>
+            </div>
+            <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">
+                © 2026 DanishStateRP. Alle rettigheder forbeholdt. | GTA V™ er et mærke tilhørende Rockstar Games.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
