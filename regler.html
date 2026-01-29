@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regler - DanishStateRP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0e27;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 14, 39, 0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            border-bottom: 2px solid #ff4655;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff4655, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #ff4655;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Page Title */
+        .page-header {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 70, 85, 0.15) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #ff4655, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4rem 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #ff4655;
+        }
+
+        .rules-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .rule-section {
+            margin-bottom: 3rem;
+        }
+
+        .rule-section h3 {
+            font-size: 1.5rem;
+            color: #ff4655;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ff4655;
+        }
+
+        .rule-item {
+            background: rgba(20, 24, 50, 0.8);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #ff4655;
+        }
+
+        .rule-item strong {
+            color: #ff4655;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .rule-item p {
+            color: #b0b0b0;
+            margin-bottom: 0.5rem;
+        }
+
+        .rule-item ul {
+            margin-left: 1.5rem;
+            color: #b0b0b0;
+        }
+
+        .rule-item li {
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 70, 85, 0.2) 0%, rgba(255, 0, 0, 0.1) 100%);
+            border: 2px solid #ff4655;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: #ff4655;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 2px solid #ff4655;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .social-links a {
+            color: #ff4655;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ff0000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .rule-section h3 {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="Index.html" class="logo">DanishStateRP</a>
+            <ul class="nav-links">
+                <li><a href="allowlist.html">Allowlist</a></li>
+                <li><a href="regler.html">Regler</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>SERVER REGLER</h1>
+        <p>Læs og respektér vores regler for at opretholde en god serverkultur</p>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="rules-container">
+
+                <!-- General Rules -->
+                <div class="rule-section">
+                    <h3>🎮 Generelle Regler</h3>
+                    
+                    <div class="rule-item">
+                        <strong>1. Respekt & Diversitet</strong>
+                        <p>Du skal behandle alle spillere og staff med respekt. Racisme, sexisme, homofobi eller anden hadefuld snak resulterer i permanent ban.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>2. No Cheating Eller Exploits</strong>
+                        <p>Brug af cheat-motorer, hacks, exploits eller uhjemlige mods resulterer i permanent ban uden advarsel. Dette gælder både in-game og på Discord.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>3. Respektér Admin-afgørelser</strong>
+                        <p>Admin-afgørelser er endelige. Hvis du mener der er sket en fejl, kan du indsende en klage via Discord #support. Argumentering med admins in-game resulterer i mute/ban.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>4. Intet OOC Drama</strong>
+                        <p>Lad spillenes verden (IC) og den virkelige verden (OOC) være adskilt. Personlige konflikter skal ikke blande sig i roleplay.</p>
+                    </div>
+                </div>
+
+                <!-- Roleplay Rules -->
+                <div class="rule-section">
+                    <h3>👥 Roleplay Regler</h3>
+                    
+                    <div class="rule-item">
+                        <strong>5. High Roleplay Standard</strong>
+                        <p>Vedligehold en høj standard for roleplay. Dårlig RP, Power Gaming eller ikke-immersive adfærd er ikke tilladt. Vi forventer seriøst og autentisk spil.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>6. Ingen Metagaming</strong>
+                        <p>Du må ikke bruge information fra Discord eller andre kilder til at få fordel i spillet. Hvad dine venner fortæller dig OOC må du ikke bruge IC.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>7. Karakter Konsistens</strong>
+                        <p>Skab en realistisk karakter med en baggrundshistorie. Undgå trololo-karakterer eller ulogisk adfærd. Dine karakterer skal have motivationer og mål.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>8. Dødsstraf (Permadeath)</strong>
+                        <p>Hvis din karakter dør, er han/hun død. Du kan lave en ny karakter, men ikke genopstå den samme. Undgå "dødsforsikring" hvor du skjuler penge.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>9. CK - Character Kill</strong>
+                        <p>Admins kan beordre en CK hvis en karakter opfører sig helt ulogisk eller bryder reglerne gentagne gange.</p>
+                    </div>
+                </div>
+
+                <!-- Combat Rules -->
+                <div class="rule-section">
+                    <h3>⚔️ Gevaldskamp & PvP Regler</h3>
+                    
+                    <div class="rule-item">
+                        <strong>10. Realistisk Kampscener</strong>
+                        <p>Combat skal være realistisk og langsom. Simuler skader, blødning og smerter. Undgå Rambo-adfærd og "COD-spil".</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>11. Intet Random VDM/RDM</strong>
+                        <p>VDM (Vehicle Deathmatch) og RDM (Random Deathmatch) er forbudt. Du skal have en god IC grund før du skyder eller påkører nogen.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>12. Advarsel Før Kamp</strong>
+                        <p>Du skal give modstanderen en rimelig chance for at overgive sig. Snigmord uden varsel er normalt ikke tilladt medmindre det er planlagt RP.</p>
+                    </div>
+                </div>
+
+                <!-- Criminal Rules -->
+                <div class="rule-section">
+                    <h3>🚔 Kriminalitet & Økonomi Regler</h3>
+                    
+                    <div class="rule-item">
+                        <strong>13. Realistisk Kriminalitet</strong>
+                        <p>Kriminalitet skal have mening og følger. Du kan ikke bare stjæle fra forretninger hele dagen uden konsekvenser.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>14. Bankrøveri & Store Heists</strong>
+                        <p>Disse skal planlægges og koordineres med admins. Spontane bankrøverier uden forberedelse er ikke tilladt.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>15. Ingen "Pay to Win"</strong>
+                        <p>Din IRL økonomi påvirker ikke dit in-game liv. Rig = rund i spillet betyder ikke du skal være rig IRL.</p>
+                    </div>
+                </div>
+
+                <!-- Discord Rules -->
+                <div class="rule-section">
+                    <h3>💬 Discord & Out-of-Game Regler</h3>
+                    
+                    <div class="rule-item">
+                        <strong>16. Respekt på Discord</strong>
+                        <p>De samme regler gælder på Discord som i-game. Intet hatetale, spamming eller drama.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>17. Ingen NSFW Indhold</strong>
+                        <p>Pornografisk eller ekstremt voldelig indhold er ikke tilladt. Dette gælder både Discord og in-game.</p>
+                    </div>
+
+                    <div class="rule-item">
+                        <strong>18. Respektér Channeler</strong>
+                        <p>Post relevant indhold i de rigtige kanaler. Undgå spam og hold kanaler organiseret.</p>
+                    </div>
+                </div>
+
+                <!-- Streaming Rules -->
+                <div class="rule-section">
+                    <h3>📹 Streaming & Recording</h3>
+                    
+                    <div class="rule-item">
+                        <strong>19. Tillad Streaming</strong>
+                        <p>Du må streame fra serveren, men først skal alle spillere i området acceptere det. Respektér privatlivets fred.</p>
+                    </div>
+                </div>
+
+                <!-- Warning Box -->
+                <div class="warning-box">
+                    <h3>⚠️ Konsekvenser for Regelbrydelse</h3>
+                    <ul>
+                        <li><strong>Første gang:</strong> Verbal advarsel</li>
+                        <li><strong>Anden gang:</strong> Mute/Kick</li>
+                        <li><strong>Tredje gang:</strong> Midlertidig ban (3-7 dage)</li>
+                        <li><strong>Alvorlige overtrædelser:</strong> Permanent ban</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Nogle overtrædelser (cheating, hatetale) resulterer direkte i permanent ban.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>DanishStateRP</h3>
+            <p>Danmarks Førende FiveM Roleplay Server</p>
+            <div class="social-links">
+                <a href="https://discord.gg/danishstaterp" target="_blank">Discord</a>
+                <a href="https://www.gta5-mods.com/" target="_blank">GTA5-Mods</a>
+                <a href="https://cfx.re/" target="_blank">CFX</a>
+            </div>
+            <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">
+                © 2026 DanishStateRP. Alle rettigheder forbeholdt. | GTA V™ er et mærke tilhørende Rockstar Games.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
